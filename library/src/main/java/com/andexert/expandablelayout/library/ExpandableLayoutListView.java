@@ -107,8 +107,9 @@ public class ExpandableLayoutListView extends ListView
         {
             if (scrollState != SCROLL_STATE_IDLE)
             {
-                for (int index = 0; index < getChildCount(); ++index)
+                for (int index = getHeaderViewsCount(); index < getChildCount()-getFooterViewsCount(); ++index)
                 {
+
                     ExpandableLayoutItem currentExpandableLayout = (ExpandableLayoutItem) getChildAt(index).findViewWithTag(ExpandableLayoutItem.class.getName());
                     if (currentExpandableLayout.isOpened() && index != (position - getFirstVisiblePosition()))
                     {
