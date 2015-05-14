@@ -12,3 +12,11 @@ buildscript {
     }
 }
 
+allprojects {
+
+    version = 1.4
+
+    repositories {
+        jcenter()
+    }
+}
